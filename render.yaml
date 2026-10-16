@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: street-life-bot
+    name: souvenir-dagestan-bot
     env: python
     plan: free
     buildCommand: pip install -r requirements.txt
@@ -14,9 +14,11 @@ services:
         sync: false
       - key: ADMIN_CHAT_ID
         sync: false
+      - key: SHOP_CONTACT
+        value: souvenir_dagestan
     # Опционально: платный постоянный диск, чтобы товары и загруженные фото
     # не пропадали при рестарте/редеплое (см. README, раздел "Постоянное хранилище").
     # disk:
-    #   name: street-life-data
+    #   name: souvenir-data
     #   mountPath: /opt/render/project/src
     #   sizeGB: 1
